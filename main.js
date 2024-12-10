@@ -35,8 +35,8 @@ function removeBoxes(){
 gridButton.addEventListener('click', () => {
     let newGridSize
     do {
-        newGridSize = prompt('Choose a new grid size')
-    } while (isNaN(newGridSize))
+        newGridSize = prompt('Choose a new grid size less than 100')
+    } while (isNaN(newGridSize) && newGridSize > 0 && newGridSize < 100)
     removeBoxes()
     createGridBoxes(newGridSize)
 })
